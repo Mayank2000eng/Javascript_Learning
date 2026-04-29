@@ -58,7 +58,7 @@ const nums=[1,2,3,4,5,6,7,8]
 // we can not use conditions in map like filter (IMPP)
 
 
-// Chaining :
+// Chaining :(mean kai sare map ya filter sath me laga skte hai ex below )
 
 // const new_arr1=nums.map((num)=>num+10).map((num)=>num*10)
 // // we can chain many as we want 
@@ -70,3 +70,34 @@ const nums=[1,2,3,4,5,6,7,8]
 // console.log(new_arr2)
 
 
+// Reduce method : // pre array ko single number me convert 
+
+const arr=[1,2,3,4]
+const inn_value=1
+
+const new_arr=arr.reduce(function (accumulator,current){
+        return accumulator+current
+} , inn_value)
+
+console.log(new_arr)
+
+// also in arrow function 
+
+const new_arr1=arr.reduce((acc,curr)=>acc+curr,inn_value)
+console.log(new_arr1)
+
+// similarly another ex :
+
+const book=[
+    {book1 : "Abc",
+        price: 200
+    },
+    {book2: "xyz",
+        price: 2000
+    }
+]
+
+// want to summ all price of books
+
+const total=book.reduce((acc,curr)=>acc+curr.price,0)
+console.log(total)
